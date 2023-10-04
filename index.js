@@ -13,8 +13,8 @@ const clothesToWear =(temperature) => {
     else
         return "Consider moving to colder country - You will melt."
 };
-
 console.log(clothesToWear(23));
+
 
 // 2- Dice game.
 
@@ -27,8 +27,22 @@ const diceRoll = a => {
         if (actualRoll === a)
             return "Jackpot!"
     }
-
-
 };
-
 console.log(diceRoll(2));
+
+
+// 3- Sentiment analyzer.
+const getSentimentScore = ["happy", "awesome", "super"] => {
+    for
+}
+const score = 0;
+const sentimentScoreObject = getSentimentScore('I am mega super awesome happy');
+
+console.log(sentimentScoreObject);
+/*
+{
+  score: 3,
+  positiveWords: ['happy', 'awesome', 'super'],
+  negativeWords: [],
+}
+*/
