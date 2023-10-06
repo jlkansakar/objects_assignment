@@ -24,15 +24,16 @@ const diceRoll = a => {
         if (actualRoll === 6) {
             return "You just hit a 6!"
         }
-        if (actualRoll === a)
+        const count = 6;
+        if ()
             return "Jackpot!"
     }
 };
-console.log(diceRoll(2));
+console.log(diceRoll(6));
 
 
 // 3- Sentiment analyzer.
-const getSentimentScore = ["happy", "awesome", "super"] => {
+/*const getSentimentScore = ["happy", "awesome", "super"] => {
     for
 }
 const score = 0;
