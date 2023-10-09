@@ -19,17 +19,23 @@ console.log(clothesToWear(23));
 // 2- Dice game.
 
 const diceRoll = a => {
+    let count = 0;
+
     for (let i = 0; i < a; i++) {
         let actualRoll = Math.floor(Math.random() * 6) + 1;
+
+
         if (actualRoll === 6) {
-            return "You just hit a 6!"
+            count++
+            console.log("you just hit a 6!")
         }
-        const count = 6;
-        if ()
-            return "Jackpot!"
+        if (count === 2) {
+            console.log("Jackpot!")
+        }
     }
-};
-console.log(diceRoll(6));
+
+}
+diceRoll(2);
 
 
 // 3- Sentiment analyzer.
