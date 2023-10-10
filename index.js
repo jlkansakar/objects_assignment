@@ -39,17 +39,62 @@ diceRoll(2);
 
 
 // 3- Sentiment analyzer.
-/*const getSentimentScore = ["happy", "awesome", "super"] => {
-    for
-}
-const score = 0;
-const sentimentScoreObject = getSentimentScore('I am mega super awesome happy');
-
-console.log(sentimentScoreObject);
 /*
-{
-  score: 3,
-  positiveWords: ['happy', 'awesome', 'super'],
-  negativeWords: [],
+let text = "";
+function getSentimentScore(text) {
+    const positiveWords = ["happy", "awesome", "super"];
+    const negativeWords = ["sad", "depressed", "angry"];
+
+    const splitSentence = text.split(/\s+/);
+    let positiveCount = 0;
+    let negativeCount = 0;
+
+    splitSentence.forEach((word) => {
+        if (positiveWords.includes(word.toLowerCase())) {
+            positiveCount++;
+        }
+        if (negativeWords.includes(word.toLowerCase())) {
+            negativeCount++;
+        }
+
+    })
+
 }
-*/
+const sentiment = getSentimentScore("I am super mega happy")
+console.log(sentiment);
+
+
+const stringer = "hejsa jeg hedder kaj";
+const splitString = stringer.split(" ");
+console.log(splitString); */
+
+function simpleSentimentAnalyzer(text) {
+    const positiveWords = ["good", "happy", "joy", "love", "excellent"];
+    const negativeWords = ["bad", "sad", "hate", "disappoint", "terrible"];
+
+    const words = text.toLowerCase().split(' ');
+
+    const positiveWordsUsed = [];
+    const negativeWordsUsed = [];
+
+    words.forEach(word => {
+
+        if (positiveWords.includes(word)) {
+            positiveWordsUsed.push(word);
+        } else if (negativeWords.includes(word)) {
+            negativeWordsUsed.push(word);
+        }
+    });
+
+    const score = positiveWordsUsed.length - negativeWordsUsed.length;
+
+    return {
+        score,
+        positiveWords: positiveWordsUsed,
+        negativeWords: negativeWordsUsed
+    };
+}
+
+const text = "I have had a good weekend and an excellent morning but a bad hair day";
+const analysis = simpleSentimentAnalyzer(text);
+console.log(analysis);
