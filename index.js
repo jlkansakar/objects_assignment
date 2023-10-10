@@ -38,37 +38,8 @@ const diceRoll = a => {
 diceRoll(2);
 
 
-// 3- Sentiment analyzer.
-/*
-let text = "";
-function getSentimentScore(text) {
-    const positiveWords = ["happy", "awesome", "super"];
-    const negativeWords = ["sad", "depressed", "angry"];
-
-    const splitSentence = text.split(/\s+/);
-    let positiveCount = 0;
-    let negativeCount = 0;
-
-    splitSentence.forEach((word) => {
-        if (positiveWords.includes(word.toLowerCase())) {
-            positiveCount++;
-        }
-        if (negativeWords.includes(word.toLowerCase())) {
-            negativeCount++;
-        }
-
-    })
-
-}
-const sentiment = getSentimentScore("I am super mega happy")
-console.log(sentiment);
-
-
-const stringer = "hejsa jeg hedder kaj";
-const splitString = stringer.split(" ");
-console.log(splitString); */
-
-function simpleSentimentAnalyzer(text) {
+// 3- Sentiment analyzer
+function sentimentAnalyzer(text) {
     const positiveWords = ["good", "happy", "joy", "love", "excellent"];
     const negativeWords = ["bad", "sad", "hate", "disappoint", "terrible"];
 
@@ -95,6 +66,5 @@ function simpleSentimentAnalyzer(text) {
     };
 }
 
-const text = "I have had a good weekend and an excellent morning but a bad hair day";
-const analysis = simpleSentimentAnalyzer(text);
-console.log(analysis);
+const sentimentScore = sentimentAnalyzer("I have had a good weekend and an excellent morning but a bad hair day");
+console.log(sentimentScore);
